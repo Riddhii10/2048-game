@@ -130,8 +130,7 @@ const Board = () => {
       return;
     }
 
-    const moveAnimations = animations.filter(
-      (animation) => animation.type === AnimationType.MOVE,
+    const moveAnimations = animations.filter((animation) => animation.type === AnimationType.MOVE,
     );
     const otherAnimations = animations.filter(
       (animation) => animation.type !== AnimationType.MOVE,

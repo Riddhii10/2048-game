@@ -1,4 +1,4 @@
-import { ActionType } from '@/types/ActionType';
+import { ActionType } from '@/types/ActionTypes';
 import { type Animation } from '@/types/Animations';
 import { type Direction } from '@/types/Direction';
 import { type ActionModel } from '@/types/Models';
