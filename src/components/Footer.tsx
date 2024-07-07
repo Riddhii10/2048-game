@@ -10,20 +10,9 @@ const Footer: React.FC = () => {
         <br />
         When two tiles with the same number touch, they{' '}
         <strong>merge into one!</strong> <br />
-        Goal is to get a tile with the number <strong>2048</strong>.
+        Goal is to get a tile with the number <strong>512</strong>.
       </p>
-      <p>
-        Built by{' '}
-        <a
-          href="https://github.com/anushwar"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-bold underline"
-        >
-          Anushwar Sharma
-        </a>
-        .
-      </p>
+
     </div>
   );
 };

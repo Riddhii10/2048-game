@@ -12,7 +12,7 @@ export default function Home() {
       <main className="mx-auto my-5 max-w-lg p-2 ">
       <Header />
         <Board />
-        <Footer />
+        {/* <Footer /> */}
         
       </main>
     </>
