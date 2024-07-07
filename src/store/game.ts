@@ -123,7 +123,7 @@ function gameReducer(state = initialState, action: ActionModel) {
   }
 
   newState.defeat = !movePossible(newState.board);
-  newState.victory = !!newState.board.find((value) => value === 2048);
+  newState.victory = !!newState.board.find((value) => value === 512);
   setStoredData(newState);
 
   return newState;
