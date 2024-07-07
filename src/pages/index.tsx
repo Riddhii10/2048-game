@@ -10,10 +10,10 @@ export default function Home() {
         <title>Play 2048!</title>
       </Head>
       <main className="mx-auto my-5 max-w-lg p-2 ">
-        
+      <Header />
         <Board />
         <Footer />
-        <Header />
+        
       </main>
     </>
   );
