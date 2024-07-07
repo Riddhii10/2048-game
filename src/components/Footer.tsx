@@ -1,35 +1,31 @@
-import useAppDispatch from '@/hooks/useAppDispatch';
-import useAppSelector from '@/hooks/useAppSelector';
-import { resetAction } from '@/store/action';
-import { useCallback } from 'react';
-
-const Control = () => {
-  const dispatch = useAppDispatch();
-  const size = useAppSelector((state) => state.app.boardSize);
-  const reset = useCallback(
-    () => dispatch(resetAction(size)),
-    [dispatch, size],
-  );
+const Footer: React.FC = () => {
   return (
-    <div className="my-2 flex w-full justify-between gap-5">
-      <div className="flex flex-col gap-2">
-        <p className="text-center font-bold">Board size</p>
-        <div className="flex w-full flex-row justify-between gap-2">
-          <button
-            onClick={() => dispatch(resetAction(size - 1))}
-            disabled={size === 4}
-          >
-            -
-          </button>
-          <div>{size}</div>
-          <button onClick={() => dispatch(resetAction(size + 1))}>+</button>
-        </div>
-      </div>
-      <div className="flex gap-5">
-        <button onClick={() => dispatch(reset())}>New game</button>
-      </div>
+    <div className="leading-lg text-center font-medium text-[#776e65]">
+      <h2 className="my-5 text-4xl underline">How to play?</h2>
+      <p className="md:text-md text-sm">
+        Use your <strong>arrow keys ( &larr; &uarr; &darr; &rarr; )</strong> to
+        move the tiles. <br />
+        If you are playing on a mobile device, you can also swipe to move the
+        tiles.
+        <br />
+        When two tiles with the same number touch, they{' '}
+        <strong>merge into one!</strong> <br />
+        Goal is to get a tile with the number <strong>2048</strong>.
+      </p>
+      <p>
+        Built by{' '}
+        <a
+          href="https://github.com/anushwar"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold underline"
+        >
+          Anushwar Sharma
+        </a>
+        .
+      </p>
     </div>
   );
 };
 
-export default Control;
+export default Footer;

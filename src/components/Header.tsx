@@ -1,19 +1,29 @@
-const Footer: React.FC = () => {
-    return (
-      <div className="leading-lg text-center font-medium text-[#776e65]">
-        <h2 className="my-5 text-4xl underline">How to play?</h2>
-        <p className="md:text-md text-sm">
-          Use your <strong>arrow keys ( &larr; &uarr; &darr; &rarr; )</strong> to
-          move the tiles. <br />
-          If you are playing on a mobile device, you can also swipe to move the
-          tiles.
-          <br />
-          When two tiles with the same number touch, they{' '}
-          <strong>merge into one!</strong> <br />
-          Goal is to get a tile with the number <strong>2048</strong>.
-        </p>
+import Control from './Control';
+import useAppSelector from '@/hooks/useAppSelector';
+
+const Header = () => {
+  const score = useAppSelector((state) => state.app.score);
+  const best = useAppSelector((state) => state.app.best);
+
+  return (
+    <>
+      <div className="flex justify-between align-middle">
+        <h1 className="text-5xl font-bold">2048</h1>
+        <div className="flex gap-5">
+          <div className="m-auto rounded-md bg-[#bbada0] p-6 text-center font-bold">
+            <div className="font-bold uppercase">Score</div>
+            <div>{score}</div>
+          </div>
+          <div className="m-auto rounded-md border-2 bg-[#bbada0] p-6 text-center font-bold">
+            <div className="font-bold uppercase">Best</div>
+            <div>{best}</div>
+          </div>
+        </div>
       </div>
-    );
-  };
-  
-  export default Footer;
+
+      <Control />
+    </>
+  );
+};
+
+export default Header;
